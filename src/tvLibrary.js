@@ -17,6 +17,6 @@ export async function getAllTv(req,res) {
     const tvShowList = collection.docs.map(
       tvShow => ( {...tvShow.data(), id: tvShow.id} )
       )
-    res.send(tvShowList)
+    res.status(201).send(tvShowList)
 }
 
